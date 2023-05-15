@@ -2,17 +2,17 @@ FOX_MANIFEST_ROOT=$(gettop)
 if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox.mk ]; then
     if [ -z "$TW_DEFAULT_LANGUAGE" ]; then
         unset TW_DEFAULT_LANGUAGE
-        export TW_DEFAULT_LANGUAGE="zh_CN"
+        export TW_DEFAULT_LANGUAGE="en"
     fi
 
     # Build
     export LC_ALL="C"
     export FOX_VERSION=$(date +%y.%m.%d)
     export ALLOW_MISSING_DEPENDENCIES=true
-    export TARGET_DEVICE_ALT="rubens"
+    export TARGET_DEVICE_ALT="borag"
     export OF_VIRTUAL_AB_DEVICE=1
     export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-    export OF_MAINTAINER="D8100-9000-TWRP-Device-Tree Team"
+    export OF_MAINTAINER="Fahadali2315"
 
     # Magiskboot
     export OF_USE_MAGISKBOOT=1
@@ -20,7 +20,7 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
     export OF_PATCH_VBMETA_FLAG=1
 
     # Magisk
-    export FOX_USE_SPECIFIC_MAGISK_ZIP="$FOX_MANIFEST_ROOT/device/xiaomi/rubens/Magisk/Magisk-v25.2.zip"
+    export FOX_USE_SPECIFIC_MAGISK_ZIP="$FOX_MANIFEST_ROOT/device/motorola/borag/Magisk/Magisk-v26.1.zip"
 
     # Binaries
     export FOX_USE_BASH_SHELL=1
@@ -52,12 +52,10 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
     # Backup
     export OF_QUICK_BACKUP_LIST="/boot;/vendor_boot;/data;"
 
-    # OTA & MIUI
-    export OF_NO_MIUI_PATCH_WARNING=1
+    # OTA
     export OF_PATCH_AVB20=1
     # export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
     export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
     # Others
     export OF_USE_GREEN_LED=0

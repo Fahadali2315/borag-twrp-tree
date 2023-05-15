@@ -84,10 +84,10 @@ jobs:
       - name: Maximize Build Space
         uses: easimon/maximize-build-space@master
         with:
-        swap-size-mb: 8192
-        remove-dotnet: 'true'
-        remove-android: 'true'
-        remove-haskell: 'true'
+           swap-size-mb: 8192
+           remove-dotnet: 'true'
+           remove-android: 'true'
+           remove-haskell: 'true'
         
       - name: Git Config
         run: |

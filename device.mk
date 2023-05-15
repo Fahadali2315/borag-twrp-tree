@@ -7,11 +7,40 @@
 
 LOCAL_PATH := device/motorola/borag
 # A/B
+
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    system \
+    product \
+    vendor \
+    odm \
+    odm_dlkm \
+    vbmeta \
+    vendor_boot \
+    vendor_dlkm \
+    vbmeta_system \
+    vbmeta_vendor
+    
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_PATH_system=system/bin/mtk_plpath_utils \
+    FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=erofs \
+    POSTINSTALL_OPTIONAL_vendor=true
+    
+# Additional Target Libraries    
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hardware.keymaster@4.1
+    
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -22,8 +51,15 @@ PRODUCT_PACKAGES += \
     bootctrl.mt6765
     
 PRODUCT_PACKAGES += \
-    otapreopt_script \
-    cppreopts.sh \
     update_engine \
+    update_engine_sideload \
     update_verifier \
-    update_engine_sideload
+    checkpoint_gc
+    
+# Mtk plpath utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils \
+    mtk_plpath_utils.recovery
+    
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)

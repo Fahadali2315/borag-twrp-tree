@@ -123,7 +123,7 @@ VENDOR_SECURITY_PATCH := 2021-08-01
 BOARD_VNDK_VERSION := current
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_borag
+TARGET_INIT_VENDOR_LIB := //$(VENDOR_PATH):libinit_borag
 TARGET_RECOVERY_DEVICE_MODULES := libinit_borag
 
 # Verified Boot

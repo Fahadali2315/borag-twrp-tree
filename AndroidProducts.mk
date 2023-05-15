@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_borag.mk
+    $(LOCAL_DIR)/twrp_borag.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_borag-user \
-    omni_borag-userdebug \
-    omni_borag-eng
+    twrp_borag-user \
+    twrp_borag-userdebug \
+    twrp_borag-eng

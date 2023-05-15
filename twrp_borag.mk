@@ -27,3 +27,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="borag-user 12 SOVS32.121-21-4 9e5f7 release-keys"
 
 BUILD_FINGERPRINT := motorola/borag_retail/borag:12/SOVS32.121-21-4/9e5f7:user/release-keys
+
+# Hide Reflash TWRP
+PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true

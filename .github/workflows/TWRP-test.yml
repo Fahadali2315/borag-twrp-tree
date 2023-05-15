@@ -69,5 +69,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: rubens_twrp-13
+        name: borag_twrp-12.1
         path: workspace/out/target/product/borag/boot.img

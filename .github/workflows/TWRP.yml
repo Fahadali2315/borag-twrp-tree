@@ -80,7 +80,15 @@ jobs:
 
       - name: Set up the Compilation environment
         run: bash sh/RP/sudo.sh
-
+        
+      - name: Maximize Build Space
+        uses: easimon/maximize-build-space@master
+        with:
+        swap-size-mb: 8192
+        remove-dotnet: 'true'
+        remove-android: 'true'
+        remove-haskell: 'true'
+        
       - name: Git Config
         run: |
           rm -rf ~/twrp

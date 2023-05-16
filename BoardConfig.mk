@@ -123,7 +123,7 @@ VENDOR_SECURITY_PATCH := 2021-08-01
 BOARD_VNDK_VERSION := current
 
 # FSTAB
-TARGET_RECOVERY_FSTAB := device/motorola/borag/first_stage_ramdisk/fstab.mt6765
+TARGET_RECOVERY_FSTAB := device/motorola/borag/recovery/root/first_stage_ramdisk/fstab.mt6765
 
 # Init
 #TARGET_INIT_VENDOR_LIB := //$(VENDOR_PATH):libinit_borag

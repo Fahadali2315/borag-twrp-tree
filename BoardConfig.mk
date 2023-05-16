@@ -144,6 +144,8 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_FASTBOOTD := true
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 #SHRP-specific lines
 SHRP_PATH := device/motorola/borag

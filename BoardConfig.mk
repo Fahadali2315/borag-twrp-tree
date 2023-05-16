@@ -36,9 +36,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 

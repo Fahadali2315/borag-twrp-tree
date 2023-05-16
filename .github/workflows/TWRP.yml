@@ -75,6 +75,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         
+      - name: Free up space
+        run: bash sh/RP/unin.sh
+
+      - name: Set up the Compilation environment
+        run: bash sh/RP/sudo.sh
+        
       - name: Maximize Build Space
         uses: easimon/maximize-build-space@master
         with:
@@ -82,13 +88,7 @@ jobs:
             remove-dotnet: 'true'
             remove-android: 'true'
             remove-haskell: 'true'
-        
-      - name: Free up space
-        run: bash sh/RP/unin.sh
-
-      - name: Set up the Compilation environment
-        run: bash sh/RP/sudo.sh
-        
+            
       - name: Git Config
         run: |
           rm -rf ~/twrp

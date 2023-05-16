@@ -146,3 +146,24 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_FASTBOOTD := true
+
+
+#SHRP-specific lines
+SHRP_PATH := device/motorola/borag
+SHRP_MAINTAINER := fahadali2315
+SHRP_DEVICE_CODE := borag
+SHRP_OFFICIAL := true
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /sdcard1
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_FLASH_MAX_BRIGHTNESS := 255
+SHRP_REC_TYPE := SAR
+SHRP_REC := /dev/block/bootdevice/by-name/boot
+SHRP_DEVICE_TYPE := AB
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+SHRP_NOTCH := true
+SHRP_EXPRESS := true
+SHRP_DARK := true

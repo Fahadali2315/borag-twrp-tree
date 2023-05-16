@@ -9,6 +9,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_borag.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_borag-user \
-    twrp_borag-userdebug \
     twrp_borag-eng

@@ -35,10 +35,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=erofs \
     POSTINSTALL_OPTIONAL_vendor=true
     
-# Additional Target Libraries    
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.keymaster@4.1
-    
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -63,8 +59,3 @@ PRODUCT_PACKAGES += \
     
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
